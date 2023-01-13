@@ -13,6 +13,7 @@ const app = express()
 app.use(cors()) // Allows requests from external sites
 app.use(morgan("dev")) // Logs requests to our url
 app.use(express.json()) // Parses incoming json
+app.use("/bookmark", bookmarkRouter) // Rnouter to be used when going to /bookmark
 
 ////// Routes //////
 app.get("/", (req, res) =>{
