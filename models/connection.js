@@ -7,6 +7,7 @@ mongoose.connect(process.env.DATABASE_URL, {
     useUnifiedTopology: true,
     useNewUrlParser: true
 })
+
 mongoose.connection
 .on("open", () => console.log("Mongoose connected"))
 .on("close", () => console.log("Disconnected from Mongoose"))
